@@ -69,7 +69,6 @@
 	</div>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script>
 	document.body.addEventListener('touchmove', onScroll);
 	window.addEventListener('scroll', onScroll);
