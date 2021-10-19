@@ -13,9 +13,7 @@
 </style>
 <div class="column">
 	{% for i in (1..25) %}
-	```
-	Spacer
-	```
+		<blockquote>Spacer</blockquote>
 	{% endfor %}
 </div>
 <div class="column">
