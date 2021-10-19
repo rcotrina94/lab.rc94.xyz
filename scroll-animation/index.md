@@ -23,7 +23,7 @@
 		height: 200px;
 		position: relative;
 		transform-style: preserve-3d;
-		transition: transform 1s;
+		transition: transform 0.1s;
 		transform-origin: center center;
 	}
 	/*
