@@ -9,12 +9,15 @@
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	.column {
+	.scroll-area {
+		min-height: 500vh;
 		display: flex;
+		width: 100%;
 		flex-direction: column;
-		/* flex: 1 0; */
+		align-items: center;
 	}
 	.scene {
+		border: 2px dashed rgba(255, 255, 255, 0.25);
 		position: sticky;
 		top: 20px;
 	}
@@ -26,14 +29,6 @@
 		transition: transform 0.1s;
 		transform-origin: center center;
 	}
-	/*
-	.cube.show-front  { transform: rotateY(   0deg); }
-	.cube.show-right  { transform: rotateY( -90deg); }
-	.cube.show-back   { transform: rotateY(-180deg); }
-	.cube.show-left   { transform: rotateY(  90deg); }
-	.cube.show-top    { transform: rotateX( -90deg); }
-	.cube.show-bottom { transform: rotateX(  90deg); } */
-
 	.cube__face {
 		position: absolute;
 		width: 200px;
@@ -60,12 +55,7 @@
 	.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
 	.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
 </style>
-<div class="column">
-	{% for i in (1..50) %}
-		<blockquote>Spacer</blockquote>
-	{% endfor %}
-</div>
-<div class="column">
+<div class="scroll-area">
 	<div class="scene">
 		<div id="cube" class="cube">
 			<div class="cube__face cube__face--front">front</div>
@@ -93,6 +83,4 @@
 		console.log(ratio);
 		cube.style.transform = 'rotate3d(3,9,8,'+ Math.min(ratio * 360, 360) + 'deg)';
 	}
-
 </script>
-
