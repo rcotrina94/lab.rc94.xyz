@@ -80,7 +80,10 @@
 
 	function onScroll(){
 		var ratio = getScrollPosition() / maxScroll;
-		console.log(ratio);
 		cube.style.transform = 'rotate3d(3,9,8,'+ Math.min(ratio * 360, 360) + 'deg)';
 	}
+
+	window.addEventListener('resize', function(){
+		maxScroll = document.body.scrollHeight - window.innerHeight;
+	});
 </script>
