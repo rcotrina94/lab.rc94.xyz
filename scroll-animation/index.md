@@ -61,7 +61,7 @@
 	.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
 </style>
 <div class="column">
-	{% for i in (1..25) %}
+	{% for i in (1..50) %}
 		<blockquote>Spacer</blockquote>
 	{% endfor %}
 </div>
