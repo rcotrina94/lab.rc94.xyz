@@ -17,7 +17,7 @@
 		align-items: center;
 	}
 	.scene {
-		border: 2px dashed rgba(255, 255, 255, 0.25);
+		border: 4px dashed rgba(255, 255, 255, 0.25);
 		position: sticky;
 		top: 64px;
 	}
@@ -33,7 +33,8 @@
 		position: absolute;
 		width: 200px;
 		height: 200px;
-		border: 2px solid black;
+		border: 4px solid black;
+		box-sizing: border-box;
 		line-height: 200px;
 		font-size: 40px;
 		font-weight: bold;
