@@ -86,12 +86,13 @@
 	function getScrollPosition() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
 
 	// var lastScrollPosition = getScrollPosition();
+	var maxScroll = document.body.scrollHeight - window.innerHeight;
 
 	console.log("lastScrollPosition:", lastScrollPosition);
 
 	function onScroll(){
 		// var newScrollPosition = getScrollPosition();
-		var ratio = getScrollPosition() / window.innerHeight;
+		var ratio = getScrollPosition() / maxScroll;
 		console.log(ratio);
 		/* var delta = lastScrollPosition - newScrollPosition;
 		lastScrollPosition = +newScrollPosition;
