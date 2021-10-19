@@ -91,7 +91,7 @@
 
 	function onScroll(){
 		// var newScrollPosition = getScrollPosition();
-		var ratio = getScrollPosition() / window.innerHeight();
+		var ratio = getScrollPosition() / window.innerHeight;
 		console.log(ratio);
 		/* var delta = lastScrollPosition - newScrollPosition;
 		lastScrollPosition = +newScrollPosition;
