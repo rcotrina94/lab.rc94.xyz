@@ -3,7 +3,6 @@
 <style>
 	html, body {
 		height: 100%;
-		overflow: auto;
 	}
 	#main_content {
 		display: flex;
