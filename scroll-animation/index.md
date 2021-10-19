@@ -67,7 +67,7 @@
 </div>
 <div class="column">
 	<div class="scene">
-		<div class="cube">
+		<div id="cube" class="cube">
 			<div class="cube__face cube__face--front">front</div>
 			<div class="cube__face cube__face--back">back</div>
 			<div class="cube__face cube__face--right">right</div>
@@ -83,21 +83,14 @@
 	document.body.addEventListener('touchmove', onScroll);
 	window.addEventListener('scroll', onScroll);
 
-	function getScrollPosition() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
+	var cube = document.getElementById('cube');
 
-	// var lastScrollPosition = getScrollPosition();
+	function getScrollPosition() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
 	var maxScroll = document.body.scrollHeight - window.innerHeight;
 
-	console.log("lastScrollPosition:", lastScrollPosition);
-
 	function onScroll(){
-		// var newScrollPosition = getScrollPosition();
 		var ratio = getScrollPosition() / maxScroll;
-		console.log(ratio);
-		/* var delta = lastScrollPosition - newScrollPosition;
-		lastScrollPosition = +newScrollPosition;
-		console.log(delta); */
-
+		cube.style.transform = 'rotate3d(1,1,1,'+ deg + 'deg) translateZ(100px)';
 	}
 
 </script>
