@@ -1,6 +1,9 @@
 ---
 ---
 <style>
+	html, body {
+		height: 100%
+	}
 	#main_content {
 		display: flex;
 		flex-direction: row;
@@ -74,4 +77,27 @@
 		</div>
 	</div>
 </div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script>
+	document.body.addEventListener('touchmove', onScroll);
+	window.addEventListener('scroll', onScroll);
+
+	function getScrollPosition() { return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0; }
+
+	// var lastScrollPosition = getScrollPosition();
+
+	console.log("lastScrollPosition:", lastScrollPosition);
+
+	function onScroll(){
+		// var newScrollPosition = getScrollPosition();
+		var ratio = getScrollPosition() / window.innerHeight();
+		console.log(ratio);
+		/* var delta = lastScrollPosition - newScrollPosition;
+		lastScrollPosition = +newScrollPosition;
+		console.log(delta); */
+
+	}
+
+</script>
 
