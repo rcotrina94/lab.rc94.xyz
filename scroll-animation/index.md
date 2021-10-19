@@ -24,6 +24,7 @@
 		position: relative;
 		transform-style: preserve-3d;
 		transition: transform 1s;
+		transform-origin: center center;
 	}
 	/*
 	.cube.show-front  { transform: rotateY(   0deg); }
