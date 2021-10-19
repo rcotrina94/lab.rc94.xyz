@@ -10,7 +10,7 @@
 		justify-content: space-between;
 	}
 	.scroll-area {
-		min-height: 500vh;
+		min-height: 300vh;
 		display: flex;
 		width: 100%;
 		flex-direction: column;
