@@ -23,16 +23,15 @@
 		height: 200px;
 		position: relative;
 		transform-style: preserve-3d;
-		transform: translateZ(-100px);
 		transition: transform 1s;
 	}
 	/*
-	.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
-	.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
-	.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
-	.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
-	.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
-	.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); } */
+	.cube.show-front  { transform: rotateY(   0deg); }
+	.cube.show-right  { transform: rotateY( -90deg); }
+	.cube.show-back   { transform: rotateY(-180deg); }
+	.cube.show-left   { transform: rotateY(  90deg); }
+	.cube.show-top    { transform: rotateX( -90deg); }
+	.cube.show-bottom { transform: rotateX(  90deg); } */
 
 	.cube__face {
 		position: absolute;
@@ -90,8 +89,8 @@
 
 	function onScroll(){
 		var ratio = getScrollPosition() / maxScroll;
-		var deg = Math.max(ratio * 360, 360);
-		cube.style.transform = 'rotate3d(1,1,1,'+ deg + 'deg) translateZ(100px)';
+		console.log(ratio);
+		cube.style.transform = 'rotate3d(1,1,1,'+ Math.min(ratio * 360, 360) + 'deg) translateZ(100px)';
 	}
 
 </script>
