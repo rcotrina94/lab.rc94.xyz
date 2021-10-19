@@ -19,7 +19,7 @@
 	.scene {
 		border: 2px dashed rgba(255, 255, 255, 0.25);
 		position: sticky;
-		top: 20px;
+		top: 64px;
 	}
 	.cube {
 		width: 200px;
