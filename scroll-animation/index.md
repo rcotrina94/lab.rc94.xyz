@@ -16,7 +16,7 @@
 	}
 	.scene {
 		position: sticky;
-		top: 0px;
+		top: 20px;
 	}
 	.cube {
 		width: 200px;
@@ -91,7 +91,7 @@
 	function onScroll(){
 		var ratio = getScrollPosition() / maxScroll;
 		console.log(ratio);
-		cube.style.transform = 'rotate3d(1,1,1,'+ Math.min(ratio * 360, 360) + 'deg) translateZ(100px)';
+		cube.style.transform = 'rotate3d(1,1,1,'+ Math.min(ratio * 360, 360) + 'deg)';
 	}
 
 </script>
